@@ -8,19 +8,16 @@ import java.time.LocalDateTime;
 import com.broswen.holiday.services.DateService;
 import com.broswen.holiday.services.DateServiceImpl;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
-import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-@TestInstance(Lifecycle.PER_CLASS)
 public class DateServiceTests {
 
     private DateService dateService;
 
-    @BeforeAll
+    @BeforeEach
     public void setup() {
         this.dateService = new DateServiceImpl(5);
     }
